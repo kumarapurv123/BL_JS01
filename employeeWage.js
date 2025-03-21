@@ -34,3 +34,7 @@ console.log("First Full Time Wage earned on Day:", firstFullTimeDay ? firstFullT
 // e. Check if Every Element of Full Time Wage is truly holding Full time wage
 let isAllFullTime = [...empDailyWageMap.values()].every(wage => wage === FULL_TIME_HOURS * WAGE_PER_HOUR);
 console.log("Every Element is Full Time Wage:", isAllFullTime);
+
+// f. Check if there is any Part Time Wage
+let hasPartTimeWage = [...empDailyWageMap.values()].some(wage => wage === PART_TIME_HOURS * WAGE_PER_HOUR);
+console.log("Is there any Part Time Wage?:", hasPartTimeWage);
