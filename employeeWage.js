@@ -38,3 +38,7 @@ console.log("Every Element is Full Time Wage:", isAllFullTime);
 // f. Check if there is any Part Time Wage
 let hasPartTimeWage = [...empDailyWageMap.values()].some(wage => wage === PART_TIME_HOURS * WAGE_PER_HOUR);
 console.log("Is there any Part Time Wage?:", hasPartTimeWage);
+
+// g. Find the number of days the Employee Worked (i.e., days with nonzero wage)
+let daysWorked = [...empDailyWageMap.values()].filter(wage => wage > 0).length;
+console.log("Number of Days Employee Worked:", daysWorked);
