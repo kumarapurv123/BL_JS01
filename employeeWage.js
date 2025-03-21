@@ -21,3 +21,8 @@ console.log("Total Employee Wage:", totalWage);
 // b. Show Day along with Daily Wage using Map helper function
 console.log("Day-wise Daily Wages:");
 empDailyWageMap.forEach((wage, day) => console.log(`Day ${day}: ${wage}`));
+
+
+// c. Show Days when Full time wage of 160 was earned
+let fullTimeDays = [...empDailyWageMap].filter(([day, wage]) => wage === FULL_TIME_HOURS * WAGE_PER_HOUR).map(([day]) => day);
+console.log("Days with Full Time Wage of 160:", fullTimeDays);
