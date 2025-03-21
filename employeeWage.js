@@ -26,3 +26,7 @@ empDailyWageMap.forEach((wage, day) => console.log(`Day ${day}: ${wage}`));
 // c. Show Days when Full time wage of 160 was earned
 let fullTimeDays = [...empDailyWageMap].filter(([day, wage]) => wage === FULL_TIME_HOURS * WAGE_PER_HOUR).map(([day]) => day);
 console.log("Days with Full Time Wage of 160:", fullTimeDays);
+
+// d. Find the first occurrence when Full Time Wage was earned
+let firstFullTimeDay = [...empDailyWageMap].find(([day, wage]) => wage === FULL_TIME_HOURS * WAGE_PER_HOUR);
+console.log("First Full Time Wage earned on Day:", firstFullTimeDay ? firstFullTimeDay[0] : "Never");
